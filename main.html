@@ -1,326 +1,275 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr">
+
 <head>
   <title>Home</title>
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="style/main.css">
-  <link rel="stylesheet" type="text/css" href="style/news.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/19195352.css" id="acuity-button-styles" />
-  <style>
-  * {
+  <!--Google Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+  <style media="screen">
+    * {
     font-size: 1.1em;
+    font-family: 'Titillium Web', sans-serif;
   }
+
+/*
   * h2{
     font-family: 'Times New Roman';
     font: bold;
-    
-  
   }
-   .font-date_range{
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-}
-.modal { position: fixed; z-index: 10000; /* 1 */ top: 0; left: 0; visibility: hidden; width: 100%; height: 100%; }
-.modal.is-visible { visibility: visible; }
-.modal-overlay { position: fixed; z-index: 10; top: 0; left: 0; width: 100%; height: 100%; background: hsla(0, 0%, 0%, 0.5); visibility: hidden; opacity: 0;  }
-.modal.is-visible .modal-overlay { opacity: 1; visibility: visible; animation-name: fadeIn;
-animation-duration: 0.4s; }
-.modal-wrapper { position: fixed; z-index: 9999; bottom: 0; left: 0; background-color: #fff; box-shadow: 0 0 1.5em hsla(0, 0%, 0%, 0.35); }
-.modal-transition {}
-.modal.is-visible .modal-transition { animation-name: slideIn; animation-duration: 0.4s }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0
+*/
+  .carousel-inner .mdc-button{
+    background-color: black;
   }
 
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes slideIn {
-  from {
-    bottom: -300px;
-    opacity: 0
+  .toast-header .mdc-button {
+    background-color: black;
   }
 
-  to {
-    bottom: 0;
-    opacity: 1
+  .mdc-top-app-bar{
+    background-color: black;
   }
-}
-/* modal popup - confirm */
-.modal-confirm .modal-wrapper{position: relative; margin: 0 10px; top:0; bottom:auto; padding:35px 0 0; border-radius: 4px;}
-.modal-wrapper h1 { font-size:1.8rem;  padding-bottom: 35px}
-.modal-wrapper .modal-content{color:#666; font-size:1.5rem; margin-bottom:3.5rem; line-height:2.3; text-align: center;}
-.modal-wrapper .btn-list{width:100%; }
-.modal-wrapper .btn-list li {height:5rem;line-height:5rem; color:#fff;font-size:1.6rem;width:50%;text-align: center;}
-.modal-wrapper .btn-list li.btn-only{width:100%;position:relative;}
-.modal-wrapper .btn-list li.btn-gr {background:#595959;}
-.modal-wrapper .btn-list li.btn-bl { background:#3673ee;} 
 
-.count-wrap{position:absolute;right:10%; top:35%; width: 25px;
-  height: 25px;}
-#loader {
-  position: absolute;
-  left:0;
-  top: 0;
-  z-index: 10;
-  
-  border: 2px solid #fff;
-  border-radius: 50%;
-  border-top: 2px solid #2f7bf5;
-  width: 21px;
-  height: 21px;
-  animation: spin .8s linear infinite;
-  
-}
-.n{display:flex;width:inherit; height:inherit; position:absolute;left:0; top:0; z-index:20; font-size:14px; justify-content:center; align-items:center}
-
-
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-.carousel-inner .mdc-button{
-  background-color: black;
-}
-.toast-header .mdc-button {
-  background-color: black;
-}
-.mdc-top-app-bar{
-  background-color: black;
-}
-.footer{
-  background-color: black;
-}
-/*For Mobile View*/
-@media (max-width: 40.625em) {
-  .bio{
-    font-size: 5vw;
+  .footer{
+    background-color: black;
   }
-  .list-group li {
-    font-size: 5vw;
+
+  /*For Mobile View*/
+  @media (max-width: 40.625em) {
+    .bio{
+      font-size: 5vw;
+    }
+    .list-group li {
+      font-size: 5vw;
+    }
   }
-}
   </style>
 </head>
 
 <body>
-  <!--Navbar-->
-  <div class="container-fluid p-0">
+  <!--Navb BEGIN-->
+  <div class="container-fluid p-0 bg-dark">
     <header class=" mdc-top-app-bar">
-  <div class="mdc-top-app-bar__row">
-    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-      <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded">menu</button><span class="mdc-top-app-bar__title">Gargola Cuts</span> </section>
-    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-       <a href="https://goo.gl/maps/A3TbEDuiCrdnMGwB9"><button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Print this page">location_on</button></a>
-        <a href="https://wa.me/13473192649/?text=13473192649"><button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Print this page">local_phone</button></a>
-      <a href="https://app.acuityscheduling.com/schedule.php?owner=19195352"><button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Bookmark this page">date_range</button></a>
-    </section>
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <!--Doesn't do amything <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded">menu</button> -->
+          <span class="mdc-top-app-bar__title mdc-typography--headline5">Gargola Cuts</span> </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+          <a href="https://goo.gl/maps/A3TbEDuiCrdnMGwB9"><button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Print this page">location_on</button></a>
+          <a href="https://wa.me/13473192649/?text=13473192649"><button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Print this page">local_phone</button></a>
+          <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" data-toggle="modal" data-target="#myModal" aria-label="Bookmark this page">date_range</button></a>
+        </section>
+      </div>
+    </header>
   </div>
-</header>
-  </div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
+  <!--Navb END-->
 
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="/assets/gargolaFace.jpeg" alt="First slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Gargola Cuts</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="/assets/gargolaBack.jpg" alt="Second slide">
-          <div class="carousel-caption d-none d-md-block">
-              <button class="mdc-button mdc-button--raised">
-                  <div class="mdc-button__ripple"></div>
-                  <span class="mdc-button__label">Book Appointment</span>
-                  <i class="material-icons">date_range</i>
-                </button>  
-            <h5>Gargola Cuts</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="/assets/gargolaBack.jpg" alt="Third slide">
-          <div class="carousel-caption d-none d-md-block">
-              <button type="button" class="btn btn-light">Book Appointment</button>
-            <h5>Gargola Cuts</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
-          </div>
+  <!--Carousel BEGIN-->
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100 top-style-image" src="assets/gargolaFace.jpeg" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <button class="mdc-button mdc-button--raised" data-toggle="modal" data-target="#myModal">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Book Appointment</span>
+            <i class="material-icons">date_range</i>
+          </button>
+          <h5>Gargola Cuts</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <div class="carousel-item">
+        <img class="d-block w-100 top-style-image" src="assets/gargolaBack.jpg" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+          <button class="mdc-button mdc-button--raised"  data-toggle="modal" data-target="#myModal">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Book Appointment</span>
+            <i class="material-icons">date_range</i>
+          </button>
+          <h5>Gargola Cuts</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 top-style-image" src="assets/gargolaBack.jpg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <button class="mdc-button mdc-button--raised"  data-toggle="modal" data-target="#myModal">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Book Appointment</span>
+            <i class="material-icons">date_range</i>
+          </button>
+          <h5>Gargola Cuts</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
+        </div>
+      </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-  <!--END Navbar-->
+  <!--Carousel END-->
 
   <!--Cover Section Begin-->
- <div class="container text-center">
-    <h2>Welcome to Gargola Cuts</h2>
-   <div class="mdc-card">
-  <div class="text-center" >
-    <div class="container">
-  
-  <div class="mx-auto bio" style="margin: 5vh;">
-      Weinston aka "Gargola Cuts" has been in the barbershop game since High School.
-      He grew up playing playing the game of baseball. That same hardwork
-      and dedication he put into baseball hes putting it into his new career as a barber.<br>
-  
-  </div>
-  </div>
- </div>
- </div>
- </div>
-<hr>
-  <!--Haircut Types containers-->
   <div class="container text-center">
-      <h2>Services</h2>
+    <h1 class="">Welcome to Gargola Cuts</h1>
     <div class="mdc-card">
-    <div class="container">
-    <ul class="list-group">
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        Kids Cut
-        <span class="badge badge-primary badge-pill badge-dark">20</span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        Regular Cut
-        <span class="badge badge-primary badge-pill badge-dark">25</span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        Design & Cut
-        <span class="badge badge-primary badge-pill badge-dark">25</span>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Beard & Cut
-          <span class="badge badge-primary badge-pill badge-dark">25</span>
-      </li>
-    </ul>
-</div>
-</div>
-  </div>
-<hr>
-    
-<!--Rules-->
-<div class="container">
-  <h2 class="text-center">Rules</h2>
-  <div class="mdc-card">
-<ul class="list-group">
-    <li class="list-group-item"></li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    
-  </ul>
-  </div>
+      <div class="text-center">
+        <div class="container">
+          <div class="mx-auto bio" style="margin: 5vh;">
+            Weinston aka "Gargola Cuts" has been in the barbershop game since High School.
+            He grew up playing playing the game of baseball. That same hardwork
+            and dedication he put into baseball hes putting it into his new career as a barber.<br>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <hr>
-<!--end of rules-->
+  <!--Haircut Types containers-->
+  <div class="container text-center">
+    <h2>Services</h2>
+    <div class="mdc-card">
+      <div class="container">
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Kids Cut
+            <span class="badge badge-primary badge-pill badge-dark">20</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Regular Cut
+            <span class="badge badge-primary badge-pill badge-dark">25</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Design & Cut
+            <span class="badge badge-primary badge-pill badge-dark">25</span>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Beard & Cut
+            <span class="badge badge-primary badge-pill badge-dark">25</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
 
-     <!--Hiarcut Slide show-->
-     <div class="container text-center">
-        <h2>Styles</h2>
-       <div class="mdc-card">
-     <div class="container">
-     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="assets/kidsCut.jpeg" alt="First slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="assets/design.png" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="assets/beard.jpeg" alt="Third slide">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+  <!--Rules-->
+  <div class="container">
+    <h2 class="text-center">Rules</h2>
+    <div class="mdc-card">
+      <ul class="list-group">
+        <li class="list-group-item"></li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+      </ul>
     </div>
-    </div>
-     </div>
-     </div>
-     <hr>
-   
-     <!--Booking-->
-     
-     <!--Alert/Notification-->
-     <div class="container">
-        <button class="modal-toggle ">Book Appointment</button>
-      <div id="modal" class="modal modal-confirm">
-        <div class="modal-overlay modal-toggle"></div>
-        <div class="modal-wrapper">
-          <div class="modal-content fs18 fc-blc lh1-4">
-            <img class="d-block w-100" src="/assets/rubioCafe.png" alt="rubioCafe">
+  </div>
+  <hr>
+  <!--end of rules-->
+
+  <!--Haircut Slide show-->
+  <div class="container text-center">
+    <h2>Styles</h2>
+    <div class="mdc-card">
+      <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100 bottom-style-image" src="assets/kidsCut.jpeg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 bottom-style-image" src="assets/design.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 bottom-style-image" src="assets/beard.jpeg" alt="Third slide">
+            </div>
           </div>
-          <ul class="btn-list">
-            <li class="btn-only btn-bl">Loading to Book Appointment<div id="count-loading" class="count-wrap"><span class="n" id="countdown-number"></span><div id="loader"></div></div></li>
-          </ul>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
     </div>
-    <!--End of Notification-->
-    
+  </div>
+
+  <hr>
+  <!--Booking-->
+  <!--Alert/Notification-->
+  <div class="container-fluid d-flex justify-content-center my-2">
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#myModal">
+      Book Appointment
+    </button>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">AD Title</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body container-fluid">
+            <img class="img-fluid" src="assets/rubioCafe.png" alt="">
+            <h4>Check Out Calritos Arias</h4>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer d-flex justify-content-center">
+            <a href="https://app.acuityscheduling.com/schedule.php?owner=19195352"><button type="button" class="btn btn-dark btn-lg mx-4" data-toggle="modal" data-target="#myModal">
+                Book Appointment
+              </button>
+              <!--  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End of Notification-->
   </hr>
-  </section>
   <!--END Cover Section-->
-  <footer id="sticky-footer" class ="footer py-4  text-white-50">
+
+  <!-- Footer -->
+  <footer id="sticky-footer" class="footer py-4  text-white-50">
     <div class="container text-center">
       <small>Copyright &copy; Made by 91tek</small>
     </div>
   </footer>
-
-</footer>
-<!-- Footer -->
-  
-  
   <!--END Footer -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- Not Needed Anymore  <script src="main.js"></script> -->
 </body>
 
 </html>
