@@ -1,17 +1,5 @@
-$('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    console.log("Clicked menu");
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
-
-});
-
-$(".img-fluid").addClass("wow fadeIn z-depth-1-half");
-
-new WOW().init();
-
 $(function() {
-  
+
     //modal
   const modal = $(".modal");
   const modalToggle = $(".modal-toggle");
@@ -57,7 +45,7 @@ $(function() {
   }
 
   modalToggle.click(showMConfirmModal);
-  
+
   $(".btn-cancel").click(function(e) {
     modal.removeClass("is-visible");
   });
