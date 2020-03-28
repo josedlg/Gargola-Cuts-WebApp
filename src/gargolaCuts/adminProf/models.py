@@ -13,9 +13,9 @@ class Barber(models.Model):
     
 
 class Ads(models.Model):
-        adsTitle = models.CharField('adsTitle',blank=True, null=True)
+        adsTitle = models.CharField('adsTitle',max_length=200,blank=True, null=True)
         adsFlyer = models.ImageField('ads picture', upload_to="ads")
-        adsInfo = models.CharField('ads info', blank=True, null=True )
+        adsInfo = models.CharField('ads info',max_length=200, blank=True, null=True )
         
         def __str__(self):
             return self.adsTitle
